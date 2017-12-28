@@ -18,8 +18,14 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe(os.environ['MQTT_TOPIC'])
 
 def on_message(client, userdata, msg):
-    data = json.loads(msg.payload)
-    if data['type'].lower() == "open":
+    splits = msg.payload.split(' ')
+
+    if splits[0].lower() == 'open':
+        data = { 'type': 'open', 'location_id': splits[1] }
+    else:
+        data = json.loads(msg.payload)
+
+    if data['type'].lower() == 'open':
         print "Opening: %s" % (data['location_id'])
         n.open_door(data['location_id'])
 

@@ -10,6 +10,12 @@ Remote open your `Nello.IO <https://www.nello.io>`_ locations via MQTT. Simply p
     "location_id": "a95a788a-e774-4561-8fc8-2225b3dccc21"
   }
 
+A simpler message format is also supported:
+
+.. code:: TEXT
+
+  open a95a788a-e774-4561-8fc8-2225b3dccc21"
+
 Nello will publish all locations to the topic on connect, and also print to console.
 
 .. code:: JSON
