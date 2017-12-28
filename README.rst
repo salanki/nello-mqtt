@@ -14,7 +14,7 @@ A simpler message format is also supported:
 
 .. code:: TEXT
 
-  open a95a788a-e774-4561-8fc8-2225b3dccc21"
+  open a95a788a-e774-4561-8fc8-2225b3dccc21
 
 Nello will publish all locations to the topic on connect, and also print to console.
 
@@ -35,7 +35,7 @@ Run as Docker container
 
 .. code:: bash
 
-  docker run --name nello -d -e NELLO_USERNAME=robot@account.com -e NELLO_PASSWORD=password -e MQTT_TOPIC=home/nello -e MQTT_BROKER=localhost nello-mqtt:latest
+  docker run --name nello -d --restart=always -e NELLO_USERNAME=robot@account.com -e NELLO_PASSWORD=password -e MQTT_TOPIC=home/nello -e MQTT_BROKER=localhost nello-mqtt:latest
 
 Usage with OpenHAB
 -----------
@@ -44,4 +44,4 @@ Simply use the `MQTT Binding <http://docs.openhab.org/addons/bindings/mqtt1/read
 
 .. code:: TEXT
 
-  Switch EntryBuzzer {mqtt=">[mybroker:home/nello:command:ON:OPEN a95a788a-e774-4561-8fc8-2225b3dccc21]
+  Switch EntryBuzzer { mqtt=">[mybroker:home/nello:command:ON:OPEN a95a788a-e774-4561-8fc8-2225b3dccc21]" expire="5s,command=OFF" }
