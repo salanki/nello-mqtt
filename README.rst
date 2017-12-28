@@ -36,3 +36,12 @@ Run as Docker container
 .. code:: bash
 
   docker run --name nello -d -e NELLO_USERNAME=robot@account.com -e NELLO_PASSWORD=password -e MQTT_TOPIC=home/nello -e MQTT_BROKER=localhost nello-mqtt:latest
+
+Usage with OpenHAB
+-----------
+
+Simply use the `MQTT Binding <http://docs.openhab.org/addons/bindings/mqtt1/readme.html>`_.
+
+.. code:: TEXT
+
+  Switch EntryBuzzer {mqtt=">[mybroker:home/nello:command:ON:OPEN a95a788a-e774-4561-8fc8-2225b3dccc21]
