@@ -44,4 +44,4 @@ Simply use the `MQTT Binding <http://docs.openhab.org/addons/bindings/mqtt1/read
 
 .. code:: TEXT
 
-  Switch EntryBuzzer { mqtt=">[mybroker:home/nello:command:ON:OPEN a95a788a-e774-4561-8fc8-2225b3dccc21]" expire="5s,command=OFF" }
+  Switch EntryBuzzer { mqtt=">[mybroker:home/nello:command:ON:OPEN a95a788a-e774-4561-8fc8-2225b3dccc21]", expire="5s,command=OFF" }
