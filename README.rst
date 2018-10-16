@@ -35,7 +35,7 @@ Run as Docker container
 
 .. code:: bash
 
-  docker run --name nello -d --restart=always -e NELLO_USERNAME=robot@account.com -e NELLO_PASSWORD=password -e MQTT_TOPIC=home/nello -e MQTT_BROKER=localhost salanki/nello-mqtt:latest
+  docker run --name nello -d --restart=always -e NELLO_USERNAME=robot@account.com -e NELLO_PASSWORD=password -e MQTT_TOPIC=home/nello -e MQTT_BROKER=localhost -e MQTT_USER=myusernmae -e MQTT_PASSWORD=mysecret salanki/nello-mqtt:latest
 
 Usage with OpenHAB
 -----------
