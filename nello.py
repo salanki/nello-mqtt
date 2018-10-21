@@ -1,6 +1,6 @@
 import os
 import json
-from pynello import Nello
+from pynello.private import Nello
 import paho.mqtt.client as mqtt
 
 n = Nello(username=os.environ['NELLO_USERNAME'], password=os.environ['NELLO_PASSWORD'])
