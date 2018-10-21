@@ -28,7 +28,7 @@ Nello will publish all locations to the topic on connect, and also print to cons
 
 Create a separate account for this integration or you will be constantly logged out from the nello app.
 
-Thanks to Philipp Schmitt for `pynello <https://github.com/pschmitt/pynello>`_.
+Nello-mqtt uses the the deprivated private from pynello. Thanks to Philipp Schmitt for `pynello <https://github.com/pschmitt/pynello>`_.
 
 Run as Docker container
 -----------
